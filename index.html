@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>شركة العاذلية القابضة | Alatheliah Holding</title>
+  
+  <!-- خطوط Google Fonts الرسمية المتناسقة -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cinzel:wght@500;600;700&family=IBM+Plex+Sans+Arabic:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --primary-navy: #132143;
+      --accent-gold: #c6a258;
+      --gold-light: rgba(198, 162, 88, 0.2);
+      --bg-cream: #faf9f6;
+      --text-dark: #1f2937;
+      --text-muted: #5a6474;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      font-family: 'IBM Plex Sans Arabic', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      overflow-x: hidden;
+      padding: 2rem 1.5rem;
+    }
+
+    /* خلفية هندسية معمارية هادئة وثابتة */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        radial-gradient(circle at 50% 18%, rgba(198, 162, 88, 0.07) 0%, transparent 60%),
+        radial-gradient(circle at 50% 80%, rgba(19, 33, 67, 0.03) 0%, transparent 50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* إطار ديكوري كلاسيكي */
+    .outer-border {
+      position: fixed;
+      top: 16px;
+      bottom: 16px;
+      left: 16px;
+      right: 16px;
+      border: 1px solid rgba(198, 162, 88, 0.22);
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    .container {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 860px;
+      margin: auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* قسم الشعار الأصلي */
+    .logo-container {
+      width: 100%;
+      max-width: 520px;
+      margin-bottom: 3rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo-img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 4px 12px rgba(19, 33, 67, 0.04));
+    }
+
+    /* فاصل ذهبي رفيع */
+    .gold-divider {
+      width: 64px;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
+      margin: 0 auto 3rem auto;
+    }
+
+    /* صندوق المحتوى والتعريف */
+    .statement-box {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(198, 162, 88, 0.35);
+      border-radius: 4px;
+      padding: 3rem 2.5rem;
+      box-shadow: 0 15px 35px -10px rgba(19, 33, 67, 0.06);
+      width: 100%;
+      position: relative;
+    }
+
+    /* زوايا ديكورية مؤسسية */
+    .corner-accent {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-color: var(--accent-gold);
+      border-style: solid;
+      pointer-events: none;
+    }
+    .corner-tl { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+    .corner-tr { top: -1px; right: -1px; border-width: 2px 2px 0 0; }
+    .corner-bl { bottom: -1px; left: -1px; border-width: 0 0 2px 2px; }
+    .corner-br { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+
+    /* النص العربي */
+    .statement-ar {
+      direction: rtl;
+      font-family: 'Amiri', 'IBM Plex Sans Arabic', serif;
+      font-size: 1.45rem;
+      line-height: 2.1;
+      color: var(--primary-navy);
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      margin-bottom: 2rem;
+    }
+
+    /* الفاصل بين اللغتين */
+    .section-separator {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 2rem 0;
+      opacity: 0.6;
+    }
+    .section-separator span {
+      display: inline-block;
+      width: 40px;
+      height: 1px;
+      background-color: var(--accent-gold);
+    }
+    .section-separator-icon {
+      margin: 0 14px;
+      width: 6px;
+      height: 6px;
+      background-color: var(--accent-gold);
+      transform: rotate(45deg);
+    }
+
+    /* النص الإنجليزي */
+    .statement-en {
+      direction: ltr;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.05rem;
+      line-height: 1.95;
+      color: var(--text-muted);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+    }
+
+    /* التذييل المؤسسي الدائم */
+    footer {
+      position: relative;
+      z-index: 1;
+      margin-top: 3.5rem;
+      text-align: center;
+    }
+
+    .footer-line {
+      font-family: 'Cinzel', serif;
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #8c97a7;
+    }
+
+    @media (max-width: 640px) {
+      .statement-box {
+        padding: 2.2rem 1.4rem;
+      }
+      .statement-ar {
+        font-size: 1.22rem;
+        line-height: 1.95;
+      }
+      .statement-en {
+        font-size: 0.95rem;
+        line-height: 1.8;
+      }
+      .outer-border {
+        top: 8px;
+        bottom: 8px;
+        left: 8px;
+        right: 8px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="outer-border"></div>
+
+  <div class="container">
+    
+    <!-- الشعار الأصلي (ضع ملف الشعار باسم image_c81b2f.png أو logo.png بجانب ملف HTML) -->
+    <div class="logo-container">
+      <img src="athel.png" 
+           alt="شركة العاذلية القابضة - Alatheliah Holding" 
+           class="logo-img"
+           onerror="if(this.src.indexOf('logo.png') === -1) { this.src='logo.png'; }">
+    </div>
+
+    <div class="gold-divider"></div>
+
+    <!-- بطاقة التعريف الرسمية المعتمدة -->
+    <div class="statement-box">
+      <div class="corner-accent corner-tl"></div>
+      <div class="corner-accent corner-tr"></div>
+      <div class="corner-accent corner-bl"></div>
+      <div class="corner-accent corner-br"></div>
+
+      <!-- التعريف باللغة العربية -->
+      <p class="statement-ar">
+        شركة العاذلية القابضة تمتلك وتدير محفظتها الخاصة من العقارات التجارية والسكنية المتميزة، وتضمن الحفاظ على جودتها وتقدم بيئة سكنية وعملية استثنائية.
+      </p>
+
+      <!-- فاصل أنيق بين اللغتين -->
+      <div class="section-separator">
+        <span></span>
+        <div class="section-separator-icon"></div>
+        <span></span>
+      </div>
+
+      <!-- التعريف باللغة الإنجليزية -->
+      <p class="statement-en">
+        Al-Adhliyah Holding Company owns and manages its distinct portfolio of commercial and residential properties, ensuring the highest standards of quality and providing exceptional living and working environments.
+      </p>
+    </div>
+
+    <!-- التذييل المؤسسي الدائم -->
+    <footer>
+      <div class="footer-line">
+        Alatheliah Holding Company &bull; All Rights Reserved
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+</html>
